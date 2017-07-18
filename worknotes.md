@@ -24,6 +24,7 @@ portNameList = ["dalian03", "fuzhou04", "fuzhou05", "guangzhou13", "lianyungang0
 ```
 ---
 
+### 定义三阶段表头
 ```python
 data.columns = ["unique_ID", "acquisition_time", "target_type", "data_supplier", "data_source",
                 "status", "longitude", "latitude", "area_ID", "speed", "conversion", "cog",
