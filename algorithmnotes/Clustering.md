@@ -12,7 +12,8 @@
 ---
 ## 相似度/距离计算方法总结
 
-- 欧式距离  
+- 欧式距离
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=d&space;=&space;\sqrt{(x_1&space;-&space;x_2)^2&space;&plus;&space;(y_1&space;-&space;y_2)^2&space;&plus;&space;(z_1&space;-&space;z_2)^2}&space;=&space;||X_1&space;-&space;X_2||" target="_blank"><img src="https://latex.codecogs.com/png.latex?d&space;=&space;\sqrt{(x_1&space;-&space;x_2)^2&space;&plus;&space;(y_1&space;-&space;y_2)^2&space;&plus;&space;(z_1&space;-&space;z_2)^2}&space;=&space;||X_1&space;-&space;X_2||" title="d = \sqrt{(x_1 - x_2)^2 + (y_1 - y_2)^2 + (z_1 - z_2)^2} = ||X_1 - X_2||" /></a>
 ，即二范式。
 
