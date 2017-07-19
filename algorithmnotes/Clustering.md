@@ -31,3 +31,9 @@
 - pearson相似度
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\rho&space;(X,&space;Y)&space;=&space;\frac{cov(X,&space;Y)}{\sqrt{var(X)\cdot&space;var(Y)}},&space;X&space;=&space;x_1,&space;x_2,&space;...,&space;x_n,&space;Y=y_1,&space;y_2,&space;y_3,&space;...,&space;y_n" target="_blank"><img src="https://latex.codecogs.com/png.latex?\rho&space;(X,&space;Y)&space;=&space;\frac{cov(X,&space;Y)}{\sqrt{var(X)\cdot&space;var(Y)}},&space;X&space;=&space;x_1,&space;x_2,&space;...,&space;x_n,&space;Y=y_1,&space;y_2,&space;y_3,&space;...,&space;y_n" title="\rho (X, Y) = \frac{cov(X, Y)}{\sqrt{var(X)\cdot var(Y)}}, X = x_1, x_2, ..., x_n, Y=y_1, y_2, y_3, ..., y_n" /></a>
+
+- 相对熵（K-L距离）
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=D(p||q)&space;=&space;\sum_{x}^{&space;}{\log&space;\frac{p(x)}{q(x)}}=E_p\log&space;\frac{p(x)}{q(x)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D(p||q)&space;=&space;\sum_{x}^{&space;}{\log&space;\frac{p(x)}{q(x)}}=E_p\log&space;\frac{p(x)}{q(x)}" title="D(p||q) = \sum_{x}^{ }{\log \frac{p(x)}{q(x)}}=E_p\log \frac{p(x)}{q(x)}" /></a>
+
+
