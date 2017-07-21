@@ -6,9 +6,19 @@
 3. 层次聚类的思路和方法
 4. 聚类指数及其意义
 
-## 聚类的定义：
+## 聚类的作用：
 - 聚类就是对大量未知标注的数据集，按数据的内在相似性将数据集划分为多个类别，使类别内的数据相似度较大而类别间的数据相似度较小。
 - 无监督
+
+## 聚类的基本思想：
+- 给定一个有N个对象的数据集，构造数据的k个簇，k≤N。满足如下条件
+  1. 每个簇至少包含一个对象
+  2. 每一个对象只属于有且仅有一个簇
+  3. 将满足上述两个条件的k个簇称作一个合理划分
+
+- 基本思想
+  对于给定的类别数目k，首先给出初始划分，通过迭代改变样本和簇的隶属关系，使得每一次改进之后的划分方案都比前一次的好
+  
 ---
 ## 相似度/距离计算方法总结
 
@@ -36,4 +46,19 @@
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=D(p||q)&space;=&space;\sum_{x}^{&space;}{\log&space;\frac{p(x)}{q(x)}}=E_p\log&space;\frac{p(x)}{q(x)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D(p||q)&space;=&space;\sum_{x}^{&space;}{\log&space;\frac{p(x)}{q(x)}}=E_p\log&space;\frac{p(x)}{q(x)}" title="D(p||q) = \sum_{x}^{ }{\log \frac{p(x)}{q(x)}}=E_p\log \frac{p(x)}{q(x)}" /></a>
 
+- Hellinger-distance
 
+![Hellinger-distance公式]
+
+---
+
+## K-Means算法
+
+- K-Means默认满足混合高斯分布，即图像是凸的，K-Means算法的聚类效果比较好。
+- 算法流程：
+  1. 给出先验值：k个类别中心（k为分类的种类数量）
+  2. 求出每个类别中心与其他对象距离的平均值，取平均值最小的序列
+  3. 对上述的每个序列，求出平均值，作为新的类别中心
+  4. 反复迭代2、3，直到满足某个条件（如：迭代次数/中心变化率/均方差），程序结束。
+  
+  
