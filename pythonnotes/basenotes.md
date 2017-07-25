@@ -18,9 +18,12 @@ mac更改pip源
 ```
 
 在pip.conf中添加
+```
 [global]
 index-url = http://mirrors.aliyun.com/pypi/simple/
 
 [install]
 trusted-host=mirrors.aliyun.com
+```
 保存，重启终端，即可用国内源安装模块
+
