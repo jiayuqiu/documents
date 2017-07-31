@@ -31,5 +31,5 @@ trusted-host=mirrors.aliyun.com
 ### 方法二：在命令行中，临时使用国内源
 
 ```bash
-> sudo pip install -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com
+> sudo pip install numpy -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com
 ```
