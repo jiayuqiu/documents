@@ -1,5 +1,6 @@
 ## pip用国内源安装模块
 
+### 方法一：修改配置文件
 国内镜像：
 1. http://pypi.douban.com/  豆瓣
 2. http://pypi.hustunique.com/  华中理工大学
@@ -27,3 +28,8 @@ trusted-host=mirrors.aliyun.com
 ```
 保存，重启终端，即可用国内源安装模块
 
+### 方法二：在命令行中，临时使用国内源
+
+```bash
+> sudo pip install -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com
+```
