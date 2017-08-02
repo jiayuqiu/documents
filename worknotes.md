@@ -30,3 +30,14 @@ data.columns = ["unique_ID", "acquisition_time", "target_type", "data_supplier",
                 "status", "longitude", "latitude", "area_ID", "speed", "conversion", "cog",
                 "true_head", "power", "ext", "extend"]
 ```
+
+### 获取文件夹内的所有文件名
+```python
+def getFileNameList(filePath):
+    import os
+
+    fileNameList = []
+    for fileName in os.listdir(filePath):
+        fileNameList.append(fileName)
+    return fileNameList
+```
