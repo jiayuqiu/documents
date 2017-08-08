@@ -41,3 +41,12 @@ def getFileNameList(filePath):
         fileNameList.append(fileName)
     return fileNameList
 ```
+
+### 判断区间，全闭
+```python
+def isInRange(num, minNum, maxNum):
+    if (num >= minNum) & (num <= maxNum):
+        return True
+    else:
+        return False
+```
