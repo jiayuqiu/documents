@@ -50,3 +50,23 @@ def isInRange(num, minNum, maxNum):
     else:
         return False
 ```
+
+### 求斜率
+```python
+def slope(x1, x2, y1, y2):
+    """
+    求斜率
+    
+    :param x1: 第一个点的经度
+    :param x2: 第一个点的纬度
+    :param y1: 第二个点的经度
+    :param y2: 第二个点的纬度
+    :return: 形成的斜率
+    """
+    if y1 == y2:
+        return 0
+    elif x1 == x2:
+        return float('Inf')
+    else:
+        return (y2 - y1) / (x2 - x1)
+```
