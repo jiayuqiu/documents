@@ -70,3 +70,8 @@ def slope(x1, x2, y1, y2):
     else:
         return (y2 - y1) / (x2 - x1)
 ```
+
+### 开头UTF-8
+```python
+# -*- coding: utf-8 -*-
+```
