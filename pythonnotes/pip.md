@@ -1,8 +1,16 @@
-# Ubuntu 14.04 利用apt安装pip
+# Ubuntu 14.04 安装pip
 
+### 方法一：利用apt
 ```bash
 $ sudo apt-get install python-pip python-dev build-essential
 $ sudo pip install --upgrade pip
+```
+
+### 方法二：下载get-pip.py
+```bash
+$ wget https://bootstrap.pypa.io/get-pip.py
+$ sudo python3 get-pip.py
+$ sudo pip3 install setuptools --upgrade
 ```
 
 # pip用国内源安装模块
