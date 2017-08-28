@@ -1,4 +1,4 @@
-记录一些常用的命令
+# 记录一些常用的命令
 
 ### 定义停泊事件的表头
 
@@ -74,4 +74,38 @@ def slope(x1, x2, y1, y2):
 ### 开头UTF-8
 ```python
 # -*- coding: utf-8 -*-
+```
+
+### 求两直线是否相交
+```python
+def get_area(point0, point1, point2):
+    """
+    利用三点，求出三角形所对面积
+    :param point0: 点0，类型list
+    :param point1: 点1，类型list
+    :param point2: 点2，类型list
+    :return: 叉乘值，类型float
+    """
+    s = point0[0] * point1[1] + point2[0] * point0[1] + point1[0] * point2[1] - \
+        point2[0] * point1[1] - point0[0] * point2[1] - point1[0] * point0[1]
+    return s
+
+
+def is_line_cross(str1, end1, str2, end2):
+    """
+    判断两条线段是否相交
+    :param str1: 起始点1，类型list
+    :param end1: 终止点1，类型list
+    :param str2: 起始点2，类型list
+    :param end2: 终止点2，类型list
+    :return: T/F
+    """
+    s1 = get_area(str1, end1, str2)
+    s2 = get_area(str1, end1, end2)
+    s3 = get_area(str2, end2, str1)
+    s4 = get_area(str2, end2, end1)
+    if (s1 * s2 <= 0) & (s3 * s4 <= 0):
+        return True
+    else:
+        return False
 ```
