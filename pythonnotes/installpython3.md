@@ -20,7 +20,17 @@ $ sudo ln -s /usr/bin/python3.5 /usr/bin/python3
 ### 方法二：源码编译安装（推荐）
 
 ```bash
+# 若在安装pip3时出现：zipimport.ZipImportError: can't decompress data; zlib not available
+# 运行
+$ sudo apt-get install zlibc zlib1g-dev
+# 然后进行如下命令
+
+# 安装依赖包
 $ sudo apt-get install build-essential # Make sure we have build tools
+$ sudo apt-get install libssl-dev
+$ sudo apt-get install openssl
+
+# 安装python3.5.3
 $ wget http://www.python.org/ftp/python/3.5.3/Python-3.5.3.tgz # download
 $ tar -zxvf Python-3.5.3.tgz           # unzip
 $ cd Python-3.5.3/                     # open directory
