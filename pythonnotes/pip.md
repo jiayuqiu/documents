@@ -26,11 +26,11 @@ $ sudo pip3 install setuptools --upgrade
 mac更改pip源
 在home目录下创建.pip文件夹，并在.pip中创建pip.conf文件
 ```bash
-> cd ~/
-> mkdir .pip
-> cd /.pip
-> touch pip.conf
-> vim pip.conf
+$ cd ~/
+$ mkdir .pip
+$ cd /.pip
+$ touch pip.conf
+$ vim pip.conf
 ```
 
 在pip.conf中添加
@@ -46,5 +46,5 @@ trusted-host=mirrors.aliyun.com
 ### 方法二：在命令行中，临时使用国内源
 
 ```bash
-> sudo pip install numpy -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com
+$ sudo pip install numpy -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com
 ```

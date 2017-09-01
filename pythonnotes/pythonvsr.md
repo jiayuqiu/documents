@@ -37,12 +37,12 @@ Key-Value(非结构化数据) | 字典:["a" : 1] | lists
 转为矩阵 | np.array(data) | matrix(c(1,2,3,4,5,6), nrow=2, byrow=T)
 转置 | data.T | t(data)
 矩阵变形 | data.reshape(1, np.prod(data.shape)) | matrix(data, ncol=nrow(data) * ncol(data))
-矩阵按行拼接 | np.r_[A, B] | rbind(A, B) 
+矩阵按行拼接 | np.r_[A, B] | rbind(A, B)
 矩阵按列拼接 | np.c_[A, B] | cbind(A, B)
 
 矩阵计算 | Python | R
 ---|---|---
-矩阵乘法 | np.dot(A, B) | A %*% B
+矩阵乘法 | np.dot(A, B) | A % * % B
 矩阵幂指 | np.power(A, 3) | A ^ 3
 全零矩阵 | np.zeros((3, 3)) | matrix(0, nrow=3, ncol=3)
 矩阵求逆 | np.linalg.inv(A) | solve(A)
