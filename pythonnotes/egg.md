@@ -1,1 +1,1 @@
-# Python制作egg包
+# Python制作egg
