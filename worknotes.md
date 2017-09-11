@@ -109,3 +109,26 @@ def is_line_cross(str1, end1, str2, end2):
     else:
         return False
 ```
+
+### 将google earth保存下来的多边形坐标转换成list
+```python
+def coordinates_kml(file_path):
+    """
+    从kml文件中获取经纬度数据
+    :param file_path: kml文件所在路径，类型：string
+    :return: 经纬坐标，用“;”分割，类型：list
+    """
+    kml_file = open(file_path, "r")
+    kml_string = kml_file.read()
+    coordinates_string = kml_string.split("<coordinates>")[1]\
+                                   .split("</coordinates>")[0]\
+                                   .replace("\t", "") \
+                                   .replace("\n", "")
+    coordinates_list = coordinates_string.split(" ")
+    out_put_coordinates_list = []
+    for coordinate in coordinates_list:
+        if coordinate:
+            tmp_coordinate = coordinate.split(",")
+            out_put_coordinates_list.append([tmp_coordinate[0], tmp_coordinate[1]])
+    return out_put_coordinates_list
+```
