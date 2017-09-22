@@ -132,3 +132,35 @@ def coordinates_kml(file_path):
             out_put_coordinates_list.append([tmp_coordinate[0], tmp_coordinate[1]])
     return out_put_coordinates_list
 ```
+
+
+### 判断点与多边形的位置关系
+```python
+def point_poly(pointLon, pointLat, polygon):
+    """
+    判断点是否在多边形内
+    :param pointLon: 该点的经度，类型：float
+    :param pointLat: 该点的唯独，类型：float
+    :param polygon: 多边形的经纬度坐标列表，类型：list
+    :return: t/f
+    """
+    polygon = np.array(polygon)
+    polygon = np.array([[float(x) for x in line] for line in polygon])
+    cor = len(polygon)
+    i = 0
+    j = cor - 1
+    inside = False
+    while (i < cor):
+        if ((((polygon[i, 1] < pointLat) & (polygon[j, 1] >= pointLat))
+                 | ((polygon[j, 1] < pointLat) & (polygon[i, 1] >= pointLat)))
+                & ((polygon[i, 0] <= pointLon) | (polygon[j, 0] <= pointLon))):
+            a = (polygon[i, 0] +
+                 (pointLat - polygon[i, 1]) / (polygon[j, 1] - polygon[i, 1]) *
+                 (polygon[j, 0] - polygon[i, 0]))
+
+            if (a < pointLon):
+                inside = not inside
+        j = i
+        i = i + 1
+    return inside
+```
