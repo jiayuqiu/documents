@@ -14,11 +14,15 @@ d = {key1 : value1, key2 : value2 }
 
 一个简单的字典实例：
 
+```python
 dict = {'Alice': '2341', 'Beth': '9102', 'Cecil': '3258'}
+```
 
 也可如此创建字典：
 
+```python
 dict1 = { 'abc': 456 };dict2 = { 'abc': 123, 98.6: 37 };
+```
 
 ------
 
@@ -28,7 +32,10 @@ dict1 = { 'abc': 456 };dict2 = { 'abc': 123, 98.6: 37 };
 
 ## 实例
 
-\#!/usr/bin/python dict = {'Name': 'Zara', 'Age': 7, 'Class': 'First'}; print "dict['Name']: ", dict['Name'];print "dict['Age']: ", dict['Age'];
+```python
+dict = {'Name': 'Zara', 'Age': 7, 'Class': 'First'}; 
+print "dict['Name']: ", dict['Name'];print "dict['Age']: ", dict['Age'];
+```
 
 以上实例输出结果：
 
@@ -41,7 +48,10 @@ dict['Age']:  7
 
 ## 实例
 
-\#!/usr/bin/python dict = {'Name': 'Zara', 'Age': 7, 'Class': 'First'}; print "dict['Alice']: ", dict['Alice'];
+```python
+dict = {'Name': 'Zara', 'Age': 7, 'Class': 'First'}; 
+print "dict['Alice']: ", dict['Alice'];
+```
 
 以上实例输出结果：
 
@@ -61,7 +71,15 @@ KeyError: 'Alice'
 
 ## 实例
 
-\#!/usr/bin/python dict = {'Name': 'Zara', 'Age': 7, 'Class': 'First'}; dict['Age'] = 8; # update existing entrydict['School'] = "DPS School"; # Add new entry  print "dict['Age']: ", dict['Age'];print "dict['School']: ", dict['School'];
+```python
+dict = {'Name': 'Zara', 'Age': 7, 'Class': 'First'}; 
+dict['Age'] = 8; 
+# update existing 
+entrydict['School'] = "DPS School"; 
+# Add new entry  
+print "dict['Age']: ", dict['Age'];
+print "dict['School']: ", dict['School'];
+```
 
 以上实例输出结果：
 
@@ -80,7 +98,14 @@ dict['School']:  DPS School
 
 ## 实例
 
-\#!/usr/bin/python# -*- coding: UTF-8 -*- dict = {'Name': 'Zara', 'Age': 7, 'Class': 'First'}; del dict['Name']; # 删除键是'Name'的条目dict.clear();     # 清空词典所有条目del dict ;        # 删除词典 print "dict['Age']: ", dict['Age'];print "dict['School']: ", dict['School'];
+```python
+# -*- coding: UTF-8 -*- 
+dict = {'Name': 'Zara', 'Age': 7, 'Class': 'First'}; 
+del dict['Name']; # 删除键是'Name'的条目dict.clear();     
+# 清空词典所有条目del dict ;        
+# 删除词典 print "dict['Age']: ", dict['Age'];
+print "dict['School']: ", dict['School'];
+```
 
 但这会引发一个异常，因为用del后字典不再存在：
 
@@ -104,7 +129,10 @@ TypeError: 'type' object is unsubscriptable
 
 ## 实例
 
-\#!/usr/bin/python dict = {'Name': 'Zara', 'Age': 7, 'Name': 'Manni'}; print "dict['Name']: ", dict['Name'];
+```python
+dict = {'Name': 'Zara', 'Age': 7, 'Name': 'Manni'}; 
+print "dict['Name']: ", dict['Name'];
+```
 
 以上实例输出结果：
 
@@ -116,7 +144,10 @@ dict['Name']:  Manni
 
 ## 实例
 
-\#!/usr/bin/python dict = {['Name']: 'Zara', 'Age': 7}; print "dict['Name']: ", dict['Name'];
+```python
+dict = {['Name']: 'Zara', 'Age': 7}; 
+print "dict['Name']: ", dict['Name'];
+```
 
 以上实例输出结果：
 
