@@ -8,7 +8,7 @@ import pandas as pd
 
 if __name__ == "__main__":
     # 不添加database参数，就会进入默认的database
-    conn = pymssql.connect(host='192.168.1.82', user='sa', password='traffic170910@0!7!@#3@1')
+    conn = pymssql.connect(host='***', user='sa', password='***')
     cur = conn.cursor()
     cur.execute("""select * from KAJH""")
     data = cur.fetchall()
