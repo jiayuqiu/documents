@@ -76,7 +76,7 @@ def slope(x1, x2, y1, y2):
 # -*- coding: utf-8 -*-
 ```
 
-### 求两直线是否相交
+### 求两线段是否相交
 ```python
 def get_area(point0, point1, point2):
     """
@@ -108,6 +108,52 @@ def is_line_cross(str1, end1, str2, end2):
         return True
     else:
         return False
+```
+
+### 求两直线交点
+```python
+class Point(object):
+    x = 0.
+    y = 0.
+
+    # 定义构造方法
+    def __init__(self, x=0., y=0.):
+        self.x = x
+        self.y = y
+
+
+class Line(object):
+    def __init__(self, p1, p2):
+        self.p1 = p1
+        self.p2 = p2
+
+
+def get_line_para(line):
+    line.a = line.p1.y - line.p2.y
+    line.b = line.p2.x - line.p1.x
+    line.c = line.p1.x * line.p2.y - line.p2.x * line.p1.y
+
+
+def get_cross_point(l1, l2):
+
+    get_line_para(l1)
+    get_line_para(l2)
+    d = l1.a * l2.b - l2.a * l1.b
+    p = Point()
+    p.x = (l1.b * l2.c - l2.b * l1.c)*1.0 / d
+    p.y = (l1.c * l2.a - l2.c * l1.a)*1.0 / d
+    return p
+
+
+p1 = Point(1, 1)
+p2 = Point(3, 3)
+line1 = Line(p1, p2)
+
+p3=Point(2, 3)
+p4=Point(3, 2)
+line2=Line(p3,p4)
+Pc = get_cross_point(line1, line2)
+print("Cross point:", Pc.x, Pc.y)
 ```
 
 ### 将google earth保存下来的多边形坐标转换成list
