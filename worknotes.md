@@ -210,3 +210,8 @@ def point_poly(pointLon, pointLat, polygon):
         i = i + 1
     return inside
 ```
+
+### wget 命令行下载ftp文件
+```
+wget ftp://username:password@127.0.0.1/filename.zip
+```
