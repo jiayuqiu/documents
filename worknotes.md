@@ -215,3 +215,18 @@ def point_poly(pointLon, pointLat, polygon):
 ```
 wget ftp://username:password@127.0.0.1/filename.zip
 ```
+
+### 时间戳转日期
+```python
+def timestamp2timestr(timestamp):
+    '''
+    时间戳格式转换年月日
+    :param timestamp: 时间戳
+    :return: 年月日
+    '''
+    timeArray = time.localtime(timestamp)
+    otherStyleTime = time.strftime("%Y%m%d", timeArray)
+    return otherStyleTime
+ ```
+ 
+ 
