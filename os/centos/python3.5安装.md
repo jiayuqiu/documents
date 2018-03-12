@@ -3,7 +3,8 @@
 •安装python3.5可能使用的依赖
 
 ```bash
-yum install openssl-devel bzip2-devel expat-devel gdbm-devel readline-devel sqlite-devel
+$ yum install openssl-devel bzip2-devel expat-devel gdbm-devel readline-devel sqlite-devel
+$ yum groupinstall "Development Tools"  # 安装build-essential
 ```
 
 CentOS 7安装Python3.5
