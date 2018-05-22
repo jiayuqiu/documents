@@ -9,7 +9,7 @@ data.columns = ["mmsi", "begin_time", "end_time", "apart_time",
                 "point_num", "avg_lon", "avg_lat", "var_hdg", "var_cog", "avg_hdgMcog",
                 "avg_sog", "var_sog", "max_sog", "maxSog_cog",
                 "max_rot", "var_rot", "draught", "avgSpeed", "zone_id", "navistate",
-                "nowPortName", "nowPortLon", "nowPortLat"]
+                "nowPortName", "PortID", "TerminalID", "BrethID", "nowPortLon", "nowPortLat"]
 ```
 ---
 ### 16+3水域列表
