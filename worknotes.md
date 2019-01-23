@@ -229,4 +229,16 @@ def timestamp2timestr(timestamp):
     return otherStyleTime
  ```
  
+ ### 日期转时间戳
+ 
+ ```python
+ def timestr2timestamp(timestr):
+    """时间转时间戳"""
+    try:
+        timeArray = time.strptime(timestr, "%Y-%m-%d %H:%M:%S")
+        dttimestamp = int(time.mktime(timeArray))
+        return dttimestamp
+    except:
+        return -1
+ ```
  
